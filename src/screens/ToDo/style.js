@@ -1,9 +1,7 @@
 import {StyleSheet} from 'react-native';
 
-import GlobalStyle from '../../utils/GlobalStyle';
-
 const styles = StyleSheet.create({
-  container: {flex: 1, },
+  container: {flex: 1},
   txt: {fontSize: 30, fontWeight: '600'},
   btn: {
     width: 60,
@@ -20,21 +18,40 @@ const styles = StyleSheet.create({
   item: {
     marginHorizontal: 10,
     marginVertical: 10,
-    paddingHorizontal: 10,
+    paddingRight: 10,
     backgroundColor: '#ffffff',
     justifyContent: 'center',
     borderRadius: 10,
     elevation: 5,
+  },
+  item_row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  delete: {
+    width: 50,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  item_body: {
+    flex: 1,
   },
   title: {
     color: '#000000',
     fontSize: 30,
     margin: 5,
   },
-  subTitle : {
+  subTitle: {
     color: '#999999',
     fontSize: 20,
-    margin: 5
+    margin: 5,
+  },
+  color : {
+    width: 20,
+    height: 100,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10
   }
 });
 

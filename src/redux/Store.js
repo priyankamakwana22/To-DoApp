@@ -9,4 +9,4 @@ import {thunk} from 'redux-thunk';
 
 const rootReducer = combineReducers({taskReducer});
 
-export const Store = createStore(rootReducer, applyMiddleware(thunk))
+export const Store = createStore(rootReducer, applyMiddleware(thunk));

@@ -10,13 +10,11 @@ import 'react-native-gesture-handler';
 import {createStackNavigator} from '@react-navigation/stack';
 import Task from './src/screens/Task';
 import {Provider} from 'react-redux';
-import { Store } from './src/redux/Store';
-
+import {Store} from './src/redux/Store';
 
 function HomeTabs() {
   const Tab = createBottomTabNavigator();
   return (
-
     <Tab.Navigator
       screenOptions={({route}) => ({
         headerShown: false,
@@ -38,7 +36,6 @@ function HomeTabs() {
       <Tab.Screen name="ToDo" component={ToDo} />
       <Tab.Screen name="Done" component={Done} />
     </Tab.Navigator>
-
   );
 }
 
@@ -46,21 +43,21 @@ const App = () => {
   const Stack = createStackNavigator();
   return (
     <Provider store={Store}>
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={() => ({
-          headerTitleAlign: 'center',
-        })}>
-        <Stack.Screen
-          name="SplashScreen"
-          component={SplashScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen name="My Tasks" component={HomeTabs} />
-        <Stack.Screen name="Task" component={Task} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  </Provider>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={() => ({
+            headerTitleAlign: 'center',
+          })}>
+          <Stack.Screen
+            name="SplashScreen"
+            component={SplashScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen name="My Tasks" component={HomeTabs} />
+          <Stack.Screen name="Task" component={Task} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 };
 
